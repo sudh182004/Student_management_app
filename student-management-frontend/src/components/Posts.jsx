@@ -53,13 +53,13 @@ const handUpdatePost = (e) =>{
         <thead>
           <tr>
              <th>Name</th>
-      <th>Age</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Qualification</th>
-      <th>Created At</th>
-      <th>Updated At</th>
-      <th>Actions</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Qualification</th>
+                <th>Created At</th>
+                <th>Updated At</th>
+                <th>Actions</th>
           </tr>
         </thead>
           <tbody>
@@ -68,12 +68,12 @@ const handUpdatePost = (e) =>{
       return (
         <tr key={index} className="section_indata">
           <td data-label="Name">{name}</td>
-<td data-label="Age">{age}</td>
-<td data-label="Email">{email}</td>
-<td data-label="Phone">{phone}</td>
-<td data-label="Qualification">{qualification}</td>
-<td data-label="Created At">{new Date(createdAt).toLocaleDateString()}</td>
-<td data-label="Updated At">{new Date(updatedAt).toLocaleDateString()}</td>
+          <td data-label="Age">{age}</td>
+          <td data-label="Email">{email}</td>
+          <td data-label="Phone">{phone}</td>
+          <td data-label="Qualification">{qualification}</td>
+          <td data-label="Created At">{new Date(createdAt).toLocaleDateString()}</td>
+          <td data-label="Updated At">{new Date(updatedAt).toLocaleDateString()}</td>
           <td>
             <button onClick={() => handUpdatePost(e)}>Edit</button>
             <button onClick={() => handDeletePost(_id, name)}>Delete</button>
@@ -83,23 +83,6 @@ const handUpdatePost = (e) =>{
     })}
   </tbody>
       </table>
-        {/* <ul className="section">
-          {data.map((e,index)=>{
-            const {age,createdAt,email,name,phone,qualification,updatedAt,_id} = e
-            return <li key={index} className="section_indata" >
-              <p>Name: {name}</p>
-              <p>Age: {age}</p>
-              <p>Email: {email}</p>
-              <p>Phone: {phone}</p>
-              <p>Qualification: {qualification}</p>
-              <p>Created At:{new Date(createdAt).toLocaleDateString()}</p>
-              <p>Updated At: {new Date(updatedAt).toLocaleDateString()}</p>
-              <button onClick={() => handUpdatePost(e)} >Edit</button>
-              <button onClick={()=> handDeletePost(_id,name)}>Delete</button>
-
-            </li>
-          })}
-        </ul> */}
        <Footer />
       </>
 
