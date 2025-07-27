@@ -146,4 +146,5 @@ export const NavBar = ({onAdd ,Update,setUpdate}) => {
       )}
     </>
   );
+  
 };

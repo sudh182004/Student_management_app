@@ -16,6 +16,7 @@ body {
   margin: 0;
   padding: 0;
   background: #000000;
+  
 }
 .m-q{
    height: 20px;
@@ -25,8 +26,10 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 .navbar {
-  position: sticky;
+  position: fixed; 
   top: 0;
+  left: 0;
+  width: 100%; 
   z-index: 900;
   display: flex;
   height: 54px;
@@ -40,6 +43,7 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
+
 .navbar-logo {
   font-size: 1.4rem;
   font-weight: 600;
@@ -52,6 +56,7 @@ body {
 .navbar-links {
   align-items: anchor-center;
   list-style: none;
+  margin-right: 50px;
   display: flex;
   gap: 24px;
   transition: all var(--transition);

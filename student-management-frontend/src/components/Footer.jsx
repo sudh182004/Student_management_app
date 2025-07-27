@@ -6,15 +6,17 @@ export const Footer = () => {
     <footer className="footer">
       <div className="footer-col left">
         <h3>StudentApp</h3>
-        <p>One App. Every Student Need.</p>
+        <p>One App. Every Student Needs.</p>
       </div>
 
       <div className="footer-col center">
-        <ul>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Terms</a></li>
-          <li><a href="#">Help</a></li>
-        </ul>
+        <nav aria-label="Footer navigation">
+          <ul>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/help">Help</a></li>
+          </ul>
+        </nav>
       </div>
 
       <div className="footer-col right">
@@ -23,4 +25,3 @@ export const Footer = () => {
     </footer>
   );
 };
-
