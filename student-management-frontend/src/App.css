@@ -1,94 +1,104 @@
 .section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  justify-content: center;
+  width: 100%;
+  border-collapse: collapse;
   background: #ffffff;
   border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.section_indata {
+.section thead {
+  background-color: #000000;
+  color: white;
+}
+
+.section thead th {
+  padding: 16px;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.section tbody tr {
   background-color: #f3f3f3;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  min-width: 260px;
-  max-width: 300px;
-  width: 100%;
-  box-sizing: border-box;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.section_indata:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.section tbody tr:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
 }
 
-.section_indata p {
-  margin: 8px 0;
+
+.section td {
+  padding: 16px;
   font-size: 0.95rem;
   color: #000000;
   word-break: break-word;
 }
 
-.section_indata button {
-  margin: 10px 8px 0 0;
+
+.section td button {
+  margin: 6px 6px 0 0;
   padding: 8px 14px;
   font-size: 0.85rem;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.section_indata button:first-of-type {
+.section td button:first-of-type {
   background-color: #000000;
   color: white;
 }
 
-.section_indata button:last-of-type {
+.section td button:last-of-type {
   background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  
-}
-
-.section_indata button:hover {
-  opacity: 0.9;
   color: black;
-  background-color: white;
 }
-.section_indata button:last-of-type:hover {
+
+.section td button:hover {
   opacity: 0.9;
-  color: white;
+}
+
+.section td button:last-of-type:hover {
   background-color: black;
-  
+  color: white;
 }
-@media (max-width: 600px) {
-  .section {
+
+@media (max-width: 768px) {
+  .section thead {
+    display: none;
+  }
+
+  .section, .section tbody, .section tr, .section td {
+    display: block;
+    width: 100%;
+  }
+
+  .section tr {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    overflow: hidden;
     padding: 10px;
-    gap: 10px;
-  }
-  
-  .section_indata {
-    padding: 15px;
-    margin: 20px;
   }
 
-  .section_indata p {
-    font-size: 0.9rem;
+  .section td {
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    font-size: 0.95rem;
   }
 
-  .section_indata button {
-    font-size: 0.8rem;
-    padding: 6px 10px;
+  .section td::before {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    content: attr(data-label);
   }
-}
-body{
-  justify-content: center;
-}
-
-
-ul.section {
-  list-style-type: none;
 }

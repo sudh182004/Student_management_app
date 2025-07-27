@@ -2,9 +2,11 @@
   background-color: #000;
   color: #fff;
   padding: 40px 20px;
+   margin-top:auto  ;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: flex-end;
+  
   flex-wrap: wrap;
   font-family: 'Inter', sans-serif;
   border-top: 1px solid #222;
